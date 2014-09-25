@@ -22,12 +22,13 @@ var oDeskApi = require('../')
 
 // you can use your own client for OAuth routine, just identify it here
 // and use as a second parameter for oDeskApi constructor (see the example of usage below)
-// note: your client must support 3 main methods:
+// note: your client must support the following methods:
 // 1. getAuthorizationUrl - gets request token/secret pair, creates and returns
 //    authorization url, based on received data
 // 2. getAccessToken(requestToken, requestTokenSecret, verifier, callback) - 
 //    requests access token/secret pair using known request token/secret pair and verifier
 // 3. setAccessToken(token, secret, callback) - sets known access token/secret pair
+// 4. get|post|put|delete(path, data, callback) - for GET, POST, PUT and DELETE methods respectively
 //
 // var MyClient = require('../lib/myclient').MyClient;
 
