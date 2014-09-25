@@ -1,3 +1,12 @@
+/**
+ * Example of usage oDeskAPI
+ *
+ * @package     oDeskAPI
+ * @since       09/22/2014
+ * @copyright   Copyright 2014(c) oDesk.com
+ * @author      Maksym Novozhylov <mnovozhilov@odesk.com>
+ * @license     oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}
+ */
 
 var config = {
   'consumerKey' : 'xxxxxxxx',
@@ -10,6 +19,17 @@ var config = {
 var oDeskApi = require('../')
   , Auth = require('../lib/routers/auth').Auth
   , rl = require('readline');
+
+// you can use your own client for OAuth routine, just identify it here
+// and use as a second parameter for oDeskApi constructor (see the example of usage below)
+// note: your client must support 3 main methods:
+// 1. getAuthorizationUrl - gets request token/secret pair, creates and returns
+//    authorization url, based on received data
+// 2. getAccessToken(requestToken, requestTokenSecret, verifier, callback) - 
+//    requests access token/secret pair using known request token/secret pair and verifier
+// 3. setAccessToken(token, secret, callback) - sets known access token/secret pair
+//
+// var MyClient = require('../lib/myclient').MyClient;
 
 // a function to get access token/secret pair
 function getAccessTokenSecretPair(api, callback) {
@@ -49,6 +69,11 @@ function getUserData(api, callback) {
 }
 
 (function main() {
+  // uncomment only if you want to use your own client
+  // var client = new MyClient(config);
+  // var api = new oDeskApi(null, client);
+
+  // use a predefined client for OAuth routine
   var api = new oDeskApi(config);
 
   if (!config.accessToken || !config.accessSecret) {
