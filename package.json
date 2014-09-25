@@ -21,7 +21,8 @@
   "dependencies": {
     "oauth": "0.9.10",
     "node-odesk": "0.0.7",
-    "qs": "~0.6.5"
+    "qs": "~0.6.5",
+    "pkginfo": "*"
   },
   "keywords": [
     "oauth",

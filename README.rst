@@ -63,3 +63,8 @@ Get user info from oDesk API::
     auth.getUserInfo(function(error, data) {
         console.log(error || data);
     });
+
+Documentation
+=============
+
+Please use YUIDoc to build local copy of documentation or use http://odesk.github.io/node-odesk/
