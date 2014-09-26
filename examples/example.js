@@ -16,8 +16,10 @@ var config = {
   'debug' : false
 };
 
-var oDeskApi = require('../')
-  , Auth = require('../lib/routers/auth').Auth
+//var oDeskApi = require('../') // uncomment to use inside current package/sources
+var oDeskApi = require('odesk-api') // use if package is installed via npm
+//  , Auth = require('../lib/routers/auth').Auth // uncomment to use inside current package/sources
+  , Auth = require('odesk-api/lib/routers/auth').Auth // use if package is installed via npm
   , rl = require('readline');
 
 // you can use your own client for OAuth routine, just identify it here
@@ -29,8 +31,11 @@ var oDeskApi = require('../')
 //    requests access token/secret pair using known request token/secret pair and verifier
 // 3. setAccessToken(token, secret, callback) - sets known access token/secret pair
 // 4. get|post|put|delete(path, data, callback) - for GET, POST, PUT and DELETE methods respectively
+// 5. setEntryPoint(entryPoint) - allows setup different entry point for base url
 //
 // var MyClient = require('../lib/myclient').MyClient;
+//
+// by default predefined lib/client.js will be used that works with other odesk oauth library
 
 // a function to get access token/secret pair
 function getAccessTokenSecretPair(api, callback) {
@@ -65,12 +70,14 @@ function getUserData(api, callback) {
   // make a call
   var auth = new Auth(api);
   auth.getUserInfo(function(error, data) {
+    // check error if needed and run your own error handler
     callback(error, data);
   });
 }
 
 (function main() {
   // uncomment only if you want to use your own client
+  // make sure you know what you're doing
   // var client = new MyClient(config);
   // var api = new oDeskApi(null, client);
 
@@ -91,6 +98,7 @@ function getUserData(api, callback) {
       });
     });
   } else {
+    // setup access token/secret pair in case it is already known
     api.setAccessToken(config.accessToken, config.accessSecret, function() {
       // get my auth data
       getUserData(api, function(error, data) {
