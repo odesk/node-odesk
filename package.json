@@ -1,0 +1,43 @@
+{
+  "name": "odesk-api",
+  "description": "Node.JS bindings for oDesk API",
+  "version": "0.1.0",
+  "author": {
+    "name": "Maksym Novozhylov",
+    "email": "mnovozhilov@odesk.com"
+  },
+  "contributors": [
+    {
+      "name": "Maksym Novozhylov",
+      "url": "https://github.com/mnovozhylov"
+    }
+  ],
+  "homepage": "https://developers.odesk.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/odesk/node-odesk.git"
+  },
+  "main": "index",
+  "dependencies": {
+    "oauth": "0.9.10",
+    "node-odesk": "0.0.7",
+    "qs": "~0.6.5",
+    "pkginfo": "*"
+  },
+  "keywords": [
+    "oauth",
+    "rest",
+    "odesk",
+    "api",
+    "wrapper"
+  ],
+  "scripts": {
+    "test": "mocha --timeout 3500"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
