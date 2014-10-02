@@ -7,20 +7,6 @@
         "logo": "https://developers.odesk.com/_static/img/logo-white.png"
     },
     "files": {
-        "example/example.js": {
-            "name": "example/example.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "example/my.js": {
-            "name": "example/my.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
         "lib/routers/activities/engagement.js": {
             "name": "lib/routers/activities/engagement.js",
             "modules": {
@@ -1151,28 +1137,6 @@
     },
     "classitems": [
         {
-            "file": "example/example.js",
-            "line": 1,
-            "description": "Example of usage oDeskAPI",
-            "package": "oDeskAPI",
-            "since": "09/22/2014",
-            "copyright": "Copyright 2014(c) oDesk.com",
-            "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
-            "class": "Engagement"
-        },
-        {
-            "file": "example/my.js",
-            "line": 1,
-            "description": "Example of usage authentication library for oDesk API",
-            "package": "oDeskAPI",
-            "since": "09/26/2014",
-            "copyright": "Copyright 2014(c) oDesk.com",
-            "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
-            "class": "Engagement"
-        },
-        {
             "file": "lib/routers/activities/engagement.js",
             "line": 1,
             "description": "oDesk auth library for using with public API by OAuth",
@@ -1180,7 +1144,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Engagement"
         },
         {
@@ -1262,7 +1226,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Team",
             "module": "routes.activities.engagement"
         },
@@ -1505,7 +1469,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Profile",
             "module": "routes.activities.team"
         },
@@ -1551,7 +1515,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Search",
             "module": "routes.freelancers.profile"
         },
@@ -1597,7 +1561,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Applications",
             "module": "routes.freelancers.search"
         },
@@ -1670,7 +1634,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Offers",
             "module": "routes.hr.clients.applications"
         },
@@ -1743,7 +1707,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Applications",
             "module": "routes.hr.clients.offers"
         },
@@ -1811,7 +1775,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Offers",
             "module": "routes.hr.contractors.applications"
         },
@@ -1879,7 +1843,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Users",
             "module": "routes.hr.contractors.offers"
         },
@@ -1984,7 +1948,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Engagements",
             "module": "routes.hr.contracts"
         },
@@ -2047,7 +2011,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Interviews",
             "module": "routes.hr.engagements"
         },
@@ -2098,7 +2062,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Jobs",
             "module": "routes.hr.interviews"
         },
@@ -2237,7 +2201,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Roles",
             "module": "routes.hr.jobs"
         },
@@ -2300,7 +2264,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Profile",
             "module": "routes.hr.roles"
         },
@@ -2346,7 +2310,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Search",
             "module": "routes.jobs.profile"
         },
@@ -2392,7 +2356,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Companies",
             "module": "routes.jobs.search"
         },
@@ -2499,7 +2463,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Teams",
             "module": "routes.organization.companies"
         },
@@ -2562,7 +2526,7 @@
             "since": "09/24/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Users",
             "module": "routes.organization.teams"
         },
@@ -2603,7 +2567,7 @@
             "since": "09/26/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Accounts",
             "module": "routes.organization.users"
         },
@@ -2681,7 +2645,7 @@
             "since": "09/26/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Billings",
             "module": "routes.reports.finance.accounts"
         },
@@ -2840,7 +2804,7 @@
             "since": "09/26/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Earnings",
             "module": "routes.reports.finance.billings"
         },
@@ -2999,7 +2963,7 @@
             "since": "09/26/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Time",
             "module": "routes.reports.finance.earnings"
         },
@@ -3236,7 +3200,7 @@
             "since": "09/22/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Auth",
             "module": "routes.reports.time"
         },
@@ -3277,7 +3241,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Mc",
             "module": "routes.auth"
         },
@@ -3541,7 +3505,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Metadata",
             "module": "routes.mc"
         },
@@ -3655,7 +3619,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Payments",
             "module": "routes.metadata"
         },
@@ -3706,7 +3670,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Snapshot",
             "module": "routes.payments"
         },
@@ -3831,7 +3795,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Teams",
             "module": "routes.snapshot"
         },
@@ -3899,7 +3863,7 @@
             "since": "09/23/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Workdiary",
             "module": "routes.teams"
         },
@@ -3960,7 +3924,7 @@
             "since": "09/22/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "oDeskApi",
             "module": "routes.workdiary"
         },
@@ -4058,7 +4022,7 @@
             "since": "09/22/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Client",
             "module": "api"
         },
@@ -4161,7 +4125,7 @@
             "since": "09/22/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Config",
             "module": "client"
         },
@@ -4173,7 +4137,7 @@
             "since": "09/22/2014",
             "copyright": "Copyright 2014(c) oDesk.com",
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
-            "license": "oDesk's API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Debug",
             "module": "config"
         },
@@ -4213,30 +4177,6 @@
     "warnings": [
         {
             "message": "unknown tag: package",
-            "line": " example/example.js:1"
-        },
-        {
-            "message": "unknown tag: copyright",
-            "line": " example/example.js:1"
-        },
-        {
-            "message": "unknown tag: license",
-            "line": " example/example.js:1"
-        },
-        {
-            "message": "unknown tag: package",
-            "line": " example/my.js:1"
-        },
-        {
-            "message": "unknown tag: copyright",
-            "line": " example/my.js:1"
-        },
-        {
-            "message": "unknown tag: license",
-            "line": " example/my.js:1"
-        },
-        {
-            "message": "unknown tag: package",
             "line": " lib/routers/activities/engagement.js:1"
         },
         {
@@ -4630,14 +4570,6 @@
         {
             "message": "unknown tag: license",
             "line": " lib/debug.js:1"
-        },
-        {
-            "message": "Missing item type\nExample of usage oDeskAPI",
-            "line": " example/example.js:1"
-        },
-        {
-            "message": "Missing item type\nExample of usage authentication library for oDesk API",
-            "line": " example/my.js:1"
         },
         {
             "message": "Missing item type\noDesk auth library for using with public API by OAuth",

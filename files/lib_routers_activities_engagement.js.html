@@ -211,7 +211,7 @@
  * @since       09/23/2014
  * @copyright   Copyright 2014(c) oDesk.com
  * @author      Maksym Novozhylov &lt;mnovozhilov@odesk.com&gt;
- * @license     oDesk&#x27;s API Terms of Use {@link http://developers.odesk.com/API-Terms-of-Use}
+ * @license     oDesk&#x27;s API Terms of Use {@link https://developers.odesk.com/api-tos.html}
  */
 
 /**
@@ -262,7 +262,7 @@ exports.Engagement.prototype.getSpecific = function(engagementRef, callback) {
  */
 exports.Engagement.prototype.assign = function(company, team, engagementRef, params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.get(&#x27;otask/v2/tasks/companies/&#x27; + company + &#x27;/teams/&#x27; + team + &#x27;/engagements/&#x27; + engagementRef + &#x27;/tasks&#x27;, params, callback);
+  this.api.client.get(&#x27;otask/v1/tasks/companies/&#x27; + company + &#x27;/teams/&#x27; + team + &#x27;/engagements/&#x27; + engagementRef + &#x27;/tasks&#x27;, params, callback);
 }
 
     </pre>
