@@ -2,7 +2,7 @@
     "project": {
         "name": "node-odesk",
         "description": "Node.JS bindings for oDesk API",
-        "version": "0.1.0",
+        "version": "0.2.0",
         "url": "https://developers.odesk.com/",
         "logo": "https://developers.odesk.com/_static/img/logo-white.png"
     },
@@ -1416,7 +1416,7 @@
                 },
                 {
                     "name": "code",
-                    "description": "Code",
+                    "description": "Code, may be a semicolon separated list of codes",
                     "type": "String"
                 },
                 {
@@ -1448,7 +1448,29 @@
                 },
                 {
                     "name": "code",
-                    "description": "Code",
+                    "description": "Code, may be a semicolon separated list of codes",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Team",
+            "module": "routes.activities.team"
+        },
+        {
+            "file": "lib/routers/activities/team.js",
+            "line": 142,
+            "description": "Update a bulk of oTask/Activity records",
+            "itemtype": "method",
+            "name": "updateBatch",
+            "params": [
+                {
+                    "name": "company",
+                    "description": "Company ID",
                     "type": "String"
                 },
                 {
@@ -1491,6 +1513,28 @@
             "description": "Get specific Freelancer Profile",
             "itemtype": "method",
             "name": "getSpecific",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "Profile key",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Profile",
+            "module": "routes.freelancers.profile"
+        },
+        {
+            "file": "lib/routers/freelancers/profile.js",
+            "line": 46,
+            "description": "Get specific Freelancer Profile in brief",
+            "itemtype": "method",
+            "name": "getSpecificBrief",
             "params": [
                 {
                     "name": "key",
@@ -1688,6 +1732,28 @@
                     "name": "reference",
                     "description": "Offer reference",
                     "type": "Integer"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Offers",
+            "module": "routes.hr.clients.offers"
+        },
+        {
+            "file": "lib/routers/hr/clients/offers.js",
+            "line": 60,
+            "description": "Send client offer",
+            "itemtype": "method",
+            "name": "makeOffer",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
                 },
                 {
                     "name": "callback",
@@ -1918,7 +1984,7 @@
             "line": 61,
             "description": "End Contract",
             "itemtype": "method",
-            "name": "restartContract",
+            "name": "endContract",
             "params": [
                 {
                     "name": "reference",
@@ -1972,6 +2038,11 @@
             "name": "getList",
             "params": [
                 {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
                     "name": "callback",
                     "description": "Callback function",
                     "type": "String"
@@ -1983,7 +2054,7 @@
         },
         {
             "file": "lib/routers/hr/engagements.js",
-            "line": 45,
+            "line": 46,
             "description": "Get specific engagement",
             "itemtype": "method",
             "name": "getSpecific",
@@ -2086,6 +2157,11 @@
             "name": "getList",
             "params": [
                 {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
                     "name": "callback",
                     "description": "Callback function",
                     "type": "String"
@@ -2097,7 +2173,7 @@
         },
         {
             "file": "lib/routers/hr/jobs.js",
-            "line": 45,
+            "line": 46,
             "description": "Get specific job",
             "itemtype": "method",
             "name": "getSpecific",
@@ -2119,7 +2195,7 @@
         },
         {
             "file": "lib/routers/hr/jobs.js",
-            "line": 58,
+            "line": 59,
             "description": "Post a new job",
             "itemtype": "method",
             "name": "postJob",
@@ -2141,7 +2217,7 @@
         },
         {
             "file": "lib/routers/hr/jobs.js",
-            "line": 71,
+            "line": 72,
             "description": "Edit existend job",
             "itemtype": "method",
             "name": "editJob",
@@ -2168,7 +2244,7 @@
         },
         {
             "file": "lib/routers/hr/jobs.js",
-            "line": 85,
+            "line": 86,
             "description": "Delete existend job",
             "itemtype": "method",
             "name": "deleteJob",
@@ -2545,10 +2621,32 @@
         {
             "file": "lib/routers/organization/users.js",
             "line": 33,
-            "description": "Get Auth User Info",
+            "description": "Get authenticated user info",
             "itemtype": "method",
             "name": "getMyInfo",
             "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Users",
+            "module": "routes.organization.users"
+        },
+        {
+            "file": "lib/routers/organization/users.js",
+            "line": 45,
+            "description": "Get referenced user info",
+            "itemtype": "method",
+            "name": "getSpecific",
+            "params": [
+                {
+                    "name": "userReference",
+                    "description": "User reference ID",
+                    "type": "String"
+                },
                 {
                     "name": "callback",
                     "description": "Callback function",
@@ -3942,8 +4040,9 @@
         {
             "file": "lib/api.js",
             "line": 47,
+            "description": "Get Authorization Url and request token",
             "itemtype": "method",
-            "name": "Get authorization URL",
+            "name": "getAuthorizationUrl",
             "params": [
                 {
                     "name": "callbackUrl",
@@ -3961,9 +4060,10 @@
         },
         {
             "file": "lib/api.js",
-            "line": 58,
+            "line": 60,
+            "description": "Get access token key/secret pair",
             "itemtype": "method",
-            "name": "Get access token",
+            "name": "getAccessToken",
             "params": [
                 {
                     "name": "requestToken",
@@ -3991,9 +4091,10 @@
         },
         {
             "file": "lib/api.js",
-            "line": 71,
+            "line": 75,
+            "description": "Set known access token key/secret pair",
             "itemtype": "method",
-            "name": "Get access token",
+            "name": "setAccessToken",
             "params": [
                 {
                     "name": "token",
@@ -4029,8 +4130,9 @@
         {
             "file": "lib/client.js",
             "line": 45,
+            "description": "Set access token key/secret pair",
             "itemtype": "method",
-            "name": "Set access token",
+            "name": "setAccessToken",
             "params": [
                 {
                     "name": "token",
@@ -4054,9 +4156,10 @@
         },
         {
             "file": "lib/client.js",
-            "line": 63,
+            "line": 65,
+            "description": "Get authorization URL and request token",
             "itemtype": "method",
-            "name": "Get authorization URL",
+            "name": "getAuthorizationUrl",
             "params": [
                 {
                     "name": "callbackUrl",
@@ -4074,9 +4177,10 @@
         },
         {
             "file": "lib/client.js",
-            "line": 73,
+            "line": 77,
+            "description": "Get access token key/secret pair",
             "itemtype": "method",
-            "name": "Get access token",
+            "name": "getAccessToken",
             "params": [
                 {
                     "name": "requestToken",
@@ -4104,9 +4208,10 @@
         },
         {
             "file": "lib/client.js",
-            "line": 85,
+            "line": 91,
+            "description": "Specify entry point used in base url",
             "itemtype": "method",
-            "name": "Specify entry point used in base url",
+            "name": "setEntryPoint",
             "params": [
                 {
                     "name": "entryPoint",

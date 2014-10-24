@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.0</em>
+            <em>API Docs for: 0.2.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -237,7 +237,7 @@ exports.Users = function(api) {
 }
 
 /**
- * Get Auth User Info
+ * Get authenticated user info
  *
  * @method getMyInfo
  * @param callback {String} Callback function
@@ -246,6 +246,19 @@ exports.Users = function(api) {
 exports.Users.prototype.getMyInfo = function(callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.get(&#x27;hr/v2/users/me&#x27;, {}, callback);
+}
+
+/**
+ * Get referenced user info
+ *
+ * @method getSpecific
+ * @param userReference {String} User reference ID
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Users.prototype.getSpecific = function(userReference, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.get(&#x27;hr/v2/users/&#x27; + userReference, {}, callback);
 }
 
     </pre>

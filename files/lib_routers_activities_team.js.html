@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.0</em>
+            <em>API Docs for: 0.2.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -312,7 +312,7 @@ exports.Team.prototype.addActivity = function(company, team, params, callback) {
  */
 exports.Team.prototype.updateActivity = function(company, team, code, params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.post(_getUrlByType(company, team, code), params, callback);
+  this.api.client.put(_getUrlByType(company, team, code), params, callback);
 }
 
 /**
@@ -321,13 +321,13 @@ exports.Team.prototype.updateActivity = function(company, team, code, params, ca
  * @method archiveActivity
  * @param company {String} Company ID
  * @param team {String} Team ID
- * @param code {String} Code
+ * @param code {String} Code, may be a semicolon separated list of codes
  * @param callback {String} Callback function
  * @async
  */
 exports.Team.prototype.archiveActivity = function(company, team, code, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.post(&#x27;otask/v1/tasks/companies/&#x27; + company + &#x27;/teams/&#x27; + team + &#x27;/archive/&#x27; + code, {}, callback);
+  this.api.client.put(&#x27;otask/v1/tasks/companies/&#x27; + company + &#x27;/teams/&#x27; + team + &#x27;/archive/&#x27; + code, {}, callback);
 }
 
 /**
@@ -336,13 +336,26 @@ exports.Team.prototype.archiveActivity = function(company, team, code, callback)
  * @method unarchiveActivity
  * @param company {String} Company ID
  * @param team {String} Team ID
- * @param code {String} Code
+ * @param code {String} Code, may be a semicolon separated list of codes
  * @param callback {String} Callback function
  * @async
  */
 exports.Team.prototype.unarchiveActivity = function(company, team, code, callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.put(&#x27;otask/v1/tasks/companies/&#x27; + company + &#x27;/teams/&#x27; + team + &#x27;/unarchive/&#x27; + code, {}, callback);
+}
+
+/**
+ * Update a bulk of oTask/Activity records
+ *
+ * @method updateBatch
+ * @param company {String} Company ID
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Team.prototype.updateBatch = function(company, params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.put(&#x27;otask/v1/tasks/companies/&#x27; + company + &#x27;/tasks/batch&#x27;, params, callback);
 }
 
     </pre>

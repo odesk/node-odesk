@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.0</em>
+            <em>API Docs for: 0.2.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -240,12 +240,13 @@ exports.Jobs = function(api) {
  * Get list of jobs
  *
  * @method getList
+ * @param params {Hash} Parameters
  * @param callback {String} Callback function
  * @async
  */
-exports.Jobs.prototype.getList = function(callback) {
+exports.Jobs.prototype.getList = function(params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.get(&#x27;hr/v2/jobs&#x27;, {}, callback);
+  this.api.client.get(&#x27;hr/v2/jobs&#x27;, params, callback);
 }
 
 /**
@@ -285,7 +286,7 @@ exports.Jobs.prototype.postJob = function(params, callback) {
  */
 exports.Jobs.prototype.editJob = function(key, params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.post(&#x27;hr/v2/jobs/&#x27; + key, params, callback);
+  this.api.client.put(&#x27;hr/v2/jobs/&#x27; + key, params, callback);
 }
 
 /**
@@ -299,7 +300,7 @@ exports.Jobs.prototype.editJob = function(key, params, callback) {
  */
 exports.Jobs.prototype.deleteJob = function(key, params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.post(&#x27;hr/v2/jobs/&#x27; + key, params, callback);
+  this.api.client.delete(&#x27;hr/v2/jobs/&#x27; + key, params, callback);
 }
 
     </pre>

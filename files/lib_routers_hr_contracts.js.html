@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.0</em>
+            <em>API Docs for: 0.2.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -259,7 +259,7 @@ exports.Contracts.prototype.suspendContract = function(reference, params, callba
  * @param callback {String} Callback function
  * @async
  */
-exports.Contracts.prototype.suspendContract = function(reference, params, callback) {
+exports.Contracts.prototype.restartContract = function(reference, params, callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.put(&#x27;hr/v2/contracts/&#x27; + reference + &#x27;/restart&#x27;, params, callback);
 }
@@ -267,7 +267,7 @@ exports.Contracts.prototype.suspendContract = function(reference, params, callba
 /**
  * End Contract
  *
- * @method restartContract
+ * @method endContract
  * @param reference {Integer} Contract reference
  * @param params {Hash} Parameters
  * @param callback {String} Callback function

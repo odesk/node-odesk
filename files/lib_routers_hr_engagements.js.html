@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.1.0</em>
+            <em>API Docs for: 0.2.0</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -240,12 +240,13 @@ exports.Engagements = function(api) {
  * Get list of engagements
  *
  * @method getList
+ * @param params {Hash} Parameters
  * @param callback {String} Callback function
  * @async
  */
-exports.Engagements.prototype.getList = function(callback) {
+exports.Engagements.prototype.getList = function(params, callback) {
   debug(&#x27;running request&#x27;);
-  this.api.client.get(&#x27;hr/v2/engagements&#x27;, {}, callback);
+  this.api.client.get(&#x27;hr/v2/engagements&#x27;, params, callback);
 }
 
 /**
