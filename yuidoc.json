@@ -1,7 +1,7 @@
 {
     "name": "node-odesk",
     "description": "Node.JS bindings for oDesk API",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "url": "https://developers.odesk.com/",
     "logo": "https://developers.odesk.com/_static/img/logo-white.png",
     "options": {

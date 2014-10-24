@@ -1,7 +1,7 @@
 {
   "name": "odesk-api",
   "description": "Node.JS bindings for oDesk API",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": {
     "name": "Maksym Novozhylov",
     "email": "mnovozhilov@odesk.com"
