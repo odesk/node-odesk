@@ -10,7 +10,7 @@ describe('debug', function(){
 
   describe('test debug mode', function(){
     it('should return current debug mode', function(){
-      assert.equal(false, debug.mode);
+      assert.equal(debug.mode, false);
     })
   })
 })
