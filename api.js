@@ -47,7 +47,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "routes.hr.engagements",
         "routes.hr.interviews",
         "routes.hr.jobs",
+        "routes.hr.milestones",
         "routes.hr.roles",
+        "routes.hr.submissions",
         "routes.jobs.profile",
         "routes.jobs.search",
         "routes.mc",
@@ -134,8 +136,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "routes.hr.jobs"
         },
         {
+            "displayName": "routes.hr.milestones",
+            "name": "routes.hr.milestones"
+        },
+        {
             "displayName": "routes.hr.roles",
             "name": "routes.hr.roles"
+        },
+        {
+            "displayName": "routes.hr.submissions",
+            "name": "routes.hr.submissions"
         },
         {
             "displayName": "routes.jobs.profile",

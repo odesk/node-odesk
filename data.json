@@ -2,7 +2,7 @@
     "project": {
         "name": "node-odesk",
         "description": "Node.JS bindings for oDesk API",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "url": "https://developers.odesk.com/",
         "logo": "https://developers.odesk.com/_static/img/logo-white.png"
     },
@@ -112,9 +112,7 @@
             "modules": {
                 "routes.hr.interviews": 1
             },
-            "classes": {
-                "Interviews": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -129,6 +127,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "lib/routers/hr/milestones.js": {
+            "name": "lib/routers/hr/milestones.js",
+            "modules": {
+                "routes.hr.milestones": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "lib/routers/hr/roles.js": {
             "name": "lib/routers/hr/roles.js",
             "modules": {
@@ -136,6 +143,17 @@
             },
             "classes": {
                 "Roles": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/routers/hr/submissions.js": {
+            "name": "lib/routers/hr/submissions.js",
+            "modules": {
+                "routes.hr.submissions": 1
+            },
+            "classes": {
+                "Interviews": 1
             },
             "fors": {},
             "namespaces": {}
@@ -473,14 +491,12 @@
         "routes.hr.interviews": {
             "name": "routes.hr.interviews",
             "submodules": {},
-            "classes": {
-                "Interviews": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {},
             "tag": "module",
             "file": "lib/routers/hr/interviews.js",
-            "line": 24
+            "line": 11
         },
         "routes.hr.jobs": {
             "name": "routes.hr.jobs",
@@ -494,6 +510,16 @@
             "file": "lib/routers/hr/jobs.js",
             "line": 24
         },
+        "routes.hr.milestones": {
+            "name": "routes.hr.milestones",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/routers/hr/milestones.js",
+            "line": 11
+        },
         "routes.hr.roles": {
             "name": "routes.hr.roles",
             "submodules": {},
@@ -504,6 +530,18 @@
             "namespaces": {},
             "tag": "module",
             "file": "lib/routers/hr/roles.js",
+            "line": 24
+        },
+        "routes.hr.submissions": {
+            "name": "routes.hr.submissions",
+            "submodules": {},
+            "classes": {
+                "Interviews": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/routers/hr/submissions.js",
             "line": 24
         },
         "routes.jobs.profile": {
@@ -874,9 +912,9 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "routes.hr.interviews",
+            "module": "routes.hr.submissions",
             "namespace": "",
-            "file": "lib/routers/hr/interviews.js",
+            "file": "lib/routers/hr/submissions.js",
             "line": 24,
             "is_constructor": 1
         },
@@ -2270,6 +2308,199 @@
             "module": "routes.hr.jobs"
         },
         {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 1,
+            "description": "oDesk auth library for using with public API by OAuth",
+            "package": "oDeskAPI",
+            "since": "11/17/2014",
+            "copyright": "Copyright 2014(c) oDesk.com",
+            "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
+            "class": "Interviews",
+            "module": "routes.hr.jobs"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 15,
+            "itemtype": "property",
+            "name": "entryPoint",
+            "type": "String",
+            "default": "api",
+            "static": 1,
+            "final": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 33,
+            "description": "Get active Milestone for specific Contract",
+            "itemtype": "method",
+            "name": "getActive",
+            "params": [
+                {
+                    "name": "contractId",
+                    "description": "Contract reference",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 46,
+            "description": "Get all Submissions for specific Milestone",
+            "itemtype": "method",
+            "name": "getActive",
+            "params": [
+                {
+                    "name": "milestoneId",
+                    "description": "Milestone reference",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 59,
+            "description": "Create a new Milestone",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 72,
+            "description": "Edit an existing Milestone",
+            "itemtype": "method",
+            "name": "edit",
+            "params": [
+                {
+                    "name": "milestoneId",
+                    "description": "Milestone ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 86,
+            "description": "Activate an existing Milestone",
+            "itemtype": "method",
+            "name": "activate",
+            "params": [
+                {
+                    "name": "milestoneId",
+                    "description": "Milestone ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 100,
+            "description": "Approve an existing Milestone",
+            "itemtype": "method",
+            "name": "approve",
+            "params": [
+                {
+                    "name": "milestoneId",
+                    "description": "Milestone ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
+            "file": "lib/routers/hr/milestones.js",
+            "line": 114,
+            "description": "Delete an existing Milestone",
+            "itemtype": "method",
+            "name": "delete",
+            "params": [
+                {
+                    "name": "milestoneId",
+                    "description": "Milestone ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.milestones"
+        },
+        {
             "file": "lib/routers/hr/roles.js",
             "line": 1,
             "description": "oDesk auth library for using with public API by OAuth",
@@ -2279,7 +2510,7 @@
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
             "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Roles",
-            "module": "routes.hr.jobs"
+            "module": "routes.hr.milestones"
         },
         {
             "file": "lib/routers/hr/roles.js",
@@ -2333,6 +2564,106 @@
             "module": "routes.hr.roles"
         },
         {
+            "file": "lib/routers/hr/submissions.js",
+            "line": 1,
+            "description": "oDesk auth library for using with public API by OAuth",
+            "package": "oDeskAPI",
+            "since": "11/17/2014",
+            "copyright": "Copyright 2014(c) oDesk.com",
+            "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
+            "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
+            "class": "Interviews",
+            "module": "routes.hr.roles"
+        },
+        {
+            "file": "lib/routers/hr/submissions.js",
+            "line": 15,
+            "itemtype": "property",
+            "name": "entryPoint",
+            "type": "String",
+            "default": "api",
+            "static": 1,
+            "final": 1,
+            "class": "Interviews",
+            "module": "routes.hr.submissions"
+        },
+        {
+            "file": "lib/routers/hr/submissions.js",
+            "line": 33,
+            "description": "Freelancer submits work for the client to approve",
+            "itemtype": "method",
+            "name": "requestApproval",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.submissions"
+        },
+        {
+            "file": "lib/routers/hr/submissions.js",
+            "line": 46,
+            "description": "Approve an existing Submission",
+            "itemtype": "method",
+            "name": "approve",
+            "params": [
+                {
+                    "name": "submissionId",
+                    "description": "Submission ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.submissions"
+        },
+        {
+            "file": "lib/routers/hr/submissions.js",
+            "line": 60,
+            "description": "Reject an existing Submission",
+            "itemtype": "method",
+            "name": "reject",
+            "params": [
+                {
+                    "name": "submissionId",
+                    "description": "Submission ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Interviews",
+            "module": "routes.hr.submissions"
+        },
+        {
             "file": "lib/routers/jobs/profile.js",
             "line": 1,
             "description": "oDesk auth library for using with public API by OAuth",
@@ -2342,7 +2673,7 @@
             "author": "Maksym Novozhylov <mnovozhilov@odesk.com>",
             "license": "oDesk's API Terms of Use {@link https://developers.odesk.com/api-tos.html}",
             "class": "Profile",
-            "module": "routes.hr.roles"
+            "module": "routes.hr.submissions"
         },
         {
             "file": "lib/routers/jobs/profile.js",
@@ -4426,6 +4757,18 @@
         },
         {
             "message": "unknown tag: package",
+            "line": " lib/routers/hr/milestones.js:1"
+        },
+        {
+            "message": "unknown tag: copyright",
+            "line": " lib/routers/hr/milestones.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " lib/routers/hr/milestones.js:1"
+        },
+        {
+            "message": "unknown tag: package",
             "line": " lib/routers/hr/roles.js:1"
         },
         {
@@ -4435,6 +4778,18 @@
         {
             "message": "unknown tag: license",
             "line": " lib/routers/hr/roles.js:1"
+        },
+        {
+            "message": "unknown tag: package",
+            "line": " lib/routers/hr/submissions.js:1"
+        },
+        {
+            "message": "unknown tag: copyright",
+            "line": " lib/routers/hr/submissions.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " lib/routers/hr/submissions.js:1"
         },
         {
             "message": "unknown tag: package",
@@ -4726,7 +5081,15 @@
         },
         {
             "message": "Missing item type\noDesk auth library for using with public API by OAuth",
+            "line": " lib/routers/hr/milestones.js:1"
+        },
+        {
+            "message": "Missing item type\noDesk auth library for using with public API by OAuth",
             "line": " lib/routers/hr/roles.js:1"
+        },
+        {
+            "message": "Missing item type\noDesk auth library for using with public API by OAuth",
+            "line": " lib/routers/hr/submissions.js:1"
         },
         {
             "message": "Missing item type\noDesk auth library for using with public API by OAuth",

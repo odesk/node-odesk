@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>routes.auth - node-odesk</title>
+    <title>lib/routers/hr/submissions.js - node-odesk</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -204,49 +204,84 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>routes.auth Module</h1>
-<div class="box clearfix meta">
-    
+                        <h1 class="file-heading">File: lib/routers/hr/submissions.js</h1>
 
-    
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * oDesk auth library for using with public API by OAuth
+ *
+ * @package     oDeskAPI
+ * @since       11/17/2014
+ * @copyright   Copyright 2014(c) oDesk.com
+ * @author      Maksym Novozhylov &lt;mnovozhilov@odesk.com&gt;
+ * @license     oDesk&#x27;s API Terms of Use {@link https://developers.odesk.com/api-tos.html}
+ */
 
-    
-        <div class="foundat">
-            Defined in: <a href="../files/lib_routers_auth.js.html#l24"><code>lib&#x2F;routers&#x2F;auth.js:24</code></a>
-        </div>
-    
+/**
+ * @module routes.hr.submissions
+ */
 
-    
-</div>
+/**
+ * @property entryPoint
+ * @type String
+ * @default api
+ * @static
+ * @final
+ */
+var entryPoint = &#x27;api&#x27;;
 
+/**
+ * @class Interviews
+ * @constructor
+ */
+exports.Submissions = function(api) {
+  this.api = api;
+  this.api.epoint = entryPoint;
+}
 
+/**
+ * Freelancer submits work for the client to approve
+ *
+ * @method requestApproval
+ * @param params {Hash} Parameters
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Submissions.prototype.requestApproval = function(params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.post(&#x27;hr/v3/fp/submissions&#x27;, params, callback);
+}
 
-<div class="box intro">
-    
-</div>
+/**
+ * Approve an existing Submission
+ *
+ * @method approve
+ * @param submissionId {Integer} Submission ID
+ * @param params {Hash} Parameters
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Submissions.prototype.approve = function(submissionId, params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.put(&#x27;hr/v3/fp/submissions/&#x27; + submissionId + &#x27;/approve&#x27;, params, callback);
+}
 
+/**
+ * Reject an existing Submission
+ *
+ * @method reject
+ * @param submissionId {Integer} Submission ID
+ * @param params {Hash} Parameters
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Submissions.prototype.reject = function(submissionId, params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.put(&#x27;hr/v3/fp/submissions/&#x27; + submissionId + &#x27;/reject&#x27;, params, callback);
+}
 
-
-<div class="yui3-g">
-    <div class="yui3-u-1-2">
-        
-            <p>This module provides the following classes:</p>
-
-            <ul class="module-classes">
-            
-                <li class="module-class">
-                    <a href="../classes/Auth.html">
-                        Auth
-                    </a>
-                </li>
-            
-            </ul>
-        
-    </div>
-
-    <div class="yui3-u-1-2">
-        
-    </div>
+    </pre>
 </div>
 
                     </div>
