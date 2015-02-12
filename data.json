@@ -2,7 +2,7 @@
     "project": {
         "name": "node-odesk",
         "description": "Node.JS bindings for oDesk API",
-        "version": "0.2.1",
+        "version": "0.2.2",
         "url": "https://developers.odesk.com/",
         "logo": "https://developers.odesk.com/_static/img/logo-white.png"
     },
@@ -2336,7 +2336,7 @@
             "line": 33,
             "description": "Get active Milestone for specific Contract",
             "itemtype": "method",
-            "name": "getActive",
+            "name": "getActiveMilestone",
             "params": [
                 {
                     "name": "contractId",
@@ -2358,7 +2358,7 @@
             "line": 46,
             "description": "Get all Submissions for specific Milestone",
             "itemtype": "method",
-            "name": "getActive",
+            "name": "getSubmissions",
             "params": [
                 {
                     "name": "milestoneId",
@@ -3953,6 +3953,23 @@
         {
             "file": "lib/routers/metadata.js",
             "line": 33,
+            "description": "Get Categories (v2)",
+            "itemtype": "method",
+            "name": "getCategoriesV2",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Metadata",
+            "module": "routes.metadata"
+        },
+        {
+            "file": "lib/routers/metadata.js",
+            "line": 45,
             "description": "Get Categories",
             "itemtype": "method",
             "name": "getCategories",
@@ -3969,7 +3986,7 @@
         },
         {
             "file": "lib/routers/metadata.js",
-            "line": 45,
+            "line": 57,
             "description": "Get Skills",
             "itemtype": "method",
             "name": "getSkills",
@@ -3986,7 +4003,7 @@
         },
         {
             "file": "lib/routers/metadata.js",
-            "line": 57,
+            "line": 69,
             "description": "Get Regions",
             "itemtype": "method",
             "name": "getRegions",
@@ -4003,7 +4020,7 @@
         },
         {
             "file": "lib/routers/metadata.js",
-            "line": 69,
+            "line": 81,
             "description": "Get Tests",
             "itemtype": "method",
             "name": "getTests",
@@ -4020,7 +4037,7 @@
         },
         {
             "file": "lib/routers/metadata.js",
-            "line": 81,
+            "line": 93,
             "description": "Get Reasons",
             "itemtype": "method",
             "name": "getReasons",
@@ -4323,6 +4340,38 @@
                 {
                     "name": "username",
                     "description": "Username",
+                    "type": "String"
+                },
+                {
+                    "name": "date",
+                    "description": "Date",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Workdiary",
+            "module": "routes.workdiary"
+        },
+        {
+            "file": "lib/routers/workdiary.js",
+            "line": 49,
+            "description": "Get Work Diary by Contract",
+            "itemtype": "method",
+            "name": "getByContract",
+            "params": [
+                {
+                    "name": "contract",
+                    "description": "Contract ID",
                     "type": "String"
                 },
                 {

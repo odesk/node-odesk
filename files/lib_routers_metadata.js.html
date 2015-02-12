@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.2.1</em>
+            <em>API Docs for: 0.2.2</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -238,6 +238,18 @@ var entryPoint = &#x27;api&#x27;;
 exports.Metadata = function(api) {
   this.api = api;
   this.api.epoint = entryPoint;
+}
+
+/**
+ * Get Categories (v2)
+ *
+ * @method getCategoriesV2
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Metadata.prototype.getCategoriesV2 = function(callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.get(&#x27;profiles/v2/metadata/categories&#x27;, {}, callback);
 }
 
 /**

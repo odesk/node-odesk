@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.2.1</em>
+            <em>API Docs for: 0.2.2</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -254,6 +254,21 @@ exports.Workdiary = function(api) {
 exports.Workdiary.prototype.get = function(company, username, date, params, callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.get(&#x27;team/v1/workdiaries/&#x27; + company + &#x27;/&#x27; + username + &#x27;/&#x27; + date, params, callback);
+}
+
+/**
+ * Get Work Diary by Contract
+ *
+ * @method getByContract
+ * @param contract {String} Contract ID
+ * @param date {String} Date
+ * @param params {Hash} Parameters
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Workdiary.prototype.getByContract = function(contract, date, params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.get(&#x27;team/v1/workdiaries/contracts/&#x27; + contract + &#x27;/&#x27; + date, params, callback);
 }
 
     </pre>

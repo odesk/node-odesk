@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.2.1</em>
+            <em>API Docs for: 0.2.2</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -243,12 +243,12 @@ exports.Milestones = function(api) {
 /**
  * Get active Milestone for specific Contract
  *
- * @method getActive
+ * @method getActiveMilestone
  * @param contractId {Hash} Contract reference
  * @param callback {String} Callback function
  * @async
  */
-exports.Milestones.prototype.getActive = function(contractId, callback) {
+exports.Milestones.prototype.getActiveMilestone = function(contractId, callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.get(&#x27;hr/v3/fp/milestones/statuses/active/contracts/&#x27; + contractId, callback);
 }
@@ -256,12 +256,12 @@ exports.Milestones.prototype.getActive = function(contractId, callback) {
 /**
  * Get all Submissions for specific Milestone
  *
- * @method getActive
+ * @method getSubmissions
  * @param milestoneId {Hash} Milestone reference
  * @param callback {String} Callback function
  * @async
  */
-exports.Milestones.prototype.getActive = function(milestoneId, callback) {
+exports.Milestones.prototype.getSubmissions = function(milestoneId, callback) {
   debug(&#x27;running request&#x27;);
   this.api.client.get(&#x27;hr/v3/fp/milestones/&#x27; + milestoneId + &#x27;/submissions&#x27;, callback);
 }
