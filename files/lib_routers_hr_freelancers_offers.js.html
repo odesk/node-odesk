@@ -266,6 +266,20 @@ exports.Offers.prototype.getSpecific = function(reference, callback) {
   this.api.client.get(&#x27;offers/v1/contractors/offers/&#x27; + reference, {}, callback);
 }
 
+/**
+ * Run specific action
+ *
+ * @method actions
+ * @param reference {Integer} Offer reference
+ * @param params {Hash} Parameters
+ * @param callback {String} Callback function
+ * @async
+ */
+exports.Offers.prototype.actions = function(reference, params, callback) {
+  debug(&#x27;running request&#x27;);
+  this.api.client.post(&#x27;offers/v1/contractors/actions/&#x27; + reference, params, callback);
+}
+
     </pre>
 </div>
 

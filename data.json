@@ -1940,6 +1940,33 @@
             "module": "routes.hr.contractors.offers"
         },
         {
+            "file": "lib/routers/hr/freelancers/offers.js",
+            "line": 59,
+            "description": "Run specific action",
+            "itemtype": "method",
+            "name": "actions",
+            "params": [
+                {
+                    "name": "reference",
+                    "description": "Offer reference",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Offers",
+            "module": "routes.hr.contractors.offers"
+        },
+        {
             "file": "lib/routers/hr/contracts.js",
             "line": 1,
             "description": "oDesk auth library for using with public API by OAuth",
@@ -4217,6 +4244,92 @@
                     "name": "username",
                     "description": "Username",
                     "type": "String"
+                },
+                {
+                    "name": "ts",
+                    "description": "Timestamp",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Snapshot",
+            "module": "routes.snapshot"
+        },
+        {
+            "file": "lib/routers/snapshot.js",
+            "line": 81,
+            "description": "Get snaphot info by specific contract",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "contract",
+                    "description": "Contract ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "ts",
+                    "description": "Timestamp",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Snapshot",
+            "module": "routes.snapshot"
+        },
+        {
+            "file": "lib/routers/snapshot.js",
+            "line": 95,
+            "description": "Update snapshot by specific contract",
+            "itemtype": "method",
+            "name": "update",
+            "params": [
+                {
+                    "name": "contract",
+                    "description": "Contract ID",
+                    "type": "Integer"
+                },
+                {
+                    "name": "ts",
+                    "description": "Timestamp",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "description": "Parameters",
+                    "type": "Hash"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function",
+                    "type": "String"
+                }
+            ],
+            "async": 1,
+            "class": "Snapshot",
+            "module": "routes.snapshot"
+        },
+        {
+            "file": "lib/routers/snapshot.js",
+            "line": 110,
+            "description": "Delete snaphot by specific contract",
+            "itemtype": "method",
+            "name": "delete",
+            "params": [
+                {
+                    "name": "contract",
+                    "description": "Contract ID",
+                    "type": "Integer"
                 },
                 {
                     "name": "ts",
