@@ -1,3 +1,5 @@
+# **DEPRECATED (use https://github.com/upwork/node-upwork instead)**
+
 Node.JS bindings for oDesk API
 ===========
 
